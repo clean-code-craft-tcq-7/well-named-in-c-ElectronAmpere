@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "./colorCodeMapper.h"
+#include "../src/colorCodeMapper.h"
 
 void testNumberToPair(int pairNumber, enum MajorColor expectedMajor,
                       enum MinorColor expectedMinor) {
