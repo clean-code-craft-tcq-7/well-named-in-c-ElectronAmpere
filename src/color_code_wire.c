@@ -1,4 +1,4 @@
-#include "./colorCodeMapper.h"
+#include "./color_code_wire.h"
 #include <stdio.h>
 
 const char *MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet"};
@@ -7,9 +7,20 @@ const char *MinorColorNames[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
-void ColorPairToString(const ColorPair_t *colorPair, char *buffer) {
-  sprintf(buffer, "%s %s", MajorColorNames[colorPair->majorColor],
-          MinorColorNames[colorPair->minorColor]);
+const char *GetMajorColor(int index) {
+  if (index < 0)
+    return "Unknown";
+  if (index >= numberOfMajorColors)
+    return "Invalid";
+  return MajorColorNames[index];
+}
+
+const char *GetMinorColor(int index) {
+  if (index < 0)
+    return "Unknown";
+  if (index >= numberOfMinorColors)
+    return "Invalid";
+  return MinorColorNames[index];
 }
 
 ColorPair_t GetColorFromPairNumber(int pairNumber) {

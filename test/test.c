@@ -1,14 +1,12 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "../src/colorCodeMapper.h"
+#include "../src/color_code_wire.h"
+#include "../src/generate_manual.h"
 
 void testNumberToPair(int pairNumber, MajorColor_t expectedMajor,
                       MinorColor_t expectedMinor) {
   ColorPair_t colorPair = GetColorFromPairNumber(pairNumber);
-  char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-  ColorPairToString(&colorPair, colorPairNames);
-  printf("Got pair %s\n", colorPairNames);
   assert(colorPair.majorColor == expectedMajor);
   assert(colorPair.minorColor == expectedMinor);
 }
@@ -23,6 +21,14 @@ void testPairToNumber(MajorColor_t major, MinorColor_t minor,
   assert(pairNumber == expectedPairNumber);
 }
 
+void testGenerateManual(void) {
+  char buffer[BUFFER_SIZE_MAX] = {0};
+  GeneratePrintErrorType_t result;
+  result = generateManualTypePrint(buffer, BUFFER_SIZE_MAX);
+  printf("%s", buffer);
+  assert(result == GPERROR_NULL);
+}
+
 int main() {
   testNumberToPair(4, WHITE, BROWN);
   testNumberToPair(5, WHITE, SLATE);
@@ -30,5 +36,6 @@ int main() {
   testPairToNumber(BLACK, ORANGE, 12);
   testPairToNumber(VIOLET, SLATE, 25);
 
+  testGenerateManual();
   return 0;
 }

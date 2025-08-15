@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __COLOR_CODE_WIRE_H__
+#define __COLOR_CODE_WIRE_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -19,10 +20,13 @@ extern const char *MinorColorNames[];
 extern int numberOfMajorColors;
 extern int numberOfMinorColors;
 
+const char *GetMajorColor(int index);
+const char *GetMinorColor(int index);
 ColorPair_t GetColorFromPairNumber(int pairNumber);
-void ColorPairToString(const ColorPair_t *colorPair, char *buffer);
 int GetPairNumberFromColor(const ColorPair_t *colorPair);
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* __COLOR_CODE_WIRE_H__ */
