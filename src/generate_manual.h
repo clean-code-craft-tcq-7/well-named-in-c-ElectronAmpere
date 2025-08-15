@@ -13,18 +13,22 @@ extern "C" {
 #define BODY_LENGTH_EMPTY (0)
 
 typedef enum {
-  GPERROR_DATA_TRUNCATED = -4,
-  GPERROR_BODY_EMPTY = -3,
-  GPERROR_HEADER_EMPTY = -2,
-  GPERROR_BUFFER_EMPTY = -1,
-  GPERROR_NULL = 0,
+  GMERROR_FILE_WRITE_FAILED = -6,
+  GMERROR_FILE_OPEN_FAILED = -5,
+  GMERROR_DATA_TRUNCATED = -4,
+  GMERROR_BODY_EMPTY = -3,
+  GMERROR_HEADER_EMPTY = -2,
+  GMERROR_BUFFER_EMPTY = -1,
+  GMERROR_NULL = 0,
+} GenerateManualErrorType_t;
 
-} GeneratePrintErrorType_t;
-
-GeneratePrintErrorType_t generateManualTypePrint(char *buffer,
-                                                 size_t bufferSize);
-int generateManualTypeMarkdown(const char *fileName);
-int generateManualTypeCSV(const char *fileName);
+GenerateManualErrorType_t generateManualTypePrint(char *buffer,
+                                                  size_t bufferSize);
+GenerateManualErrorType_t generateManualTypeMarkdown(char *buffer,
+                                                     size_t bufferSize,
+                                                     const char *fileName);
+GenerateManualErrorType_t generateManualTypeCSV(char *buffer, size_t bufferSize,
+                                                const char *fileName);
 
 #ifdef __cplusplus
 }
