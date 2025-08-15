@@ -19,28 +19,6 @@ void testGenerateManualCSVBufferEmpty(void) {
   assert(result == GMERROR_BUFFER_EMPTY);
 }
 
-void testGenerateManualCSVHeaderEmpty(void) {
-  // Remark: Not testable unless manipulated or the funtion snprintf fails
-  // Note: Need to update implementation for better tests
-  GenerateManualErrorType_t result;
-  char buffer[30] = {0};
-  result = generateManual(buffer, 30, "./test/manual.csv",
-                          "\"%s\",\"%s\",\"%s\"\n", "%d,\"%s\",\"%s\"\n");
-  printf("generateManualTypePrint: %d\n", result);
-  assert(result == GMERROR_HEADER_EMPTY);
-}
-
-void testGenerateManualCSVBodyEmpty(void) {
-  // Remark: Not testable unless manipulated or the funtion snprintf fails
-  // Note: Need to update implementation for better tests
-  GenerateManualErrorType_t result;
-  char buffer[100] = {0};
-  result = generateManual(buffer, 100, "./test/manual.csv",
-                          "\"%s\",\"%s\",\"%s\"\n", "%d,\"%s\",\"%s\"\n");
-  printf("generateManualTypePrint: %d\n", result);
-  assert(result == GMERROR_BODY_EMPTY);
-}
-
 void testGenerateManualCSVTruncation(void) {
   GenerateManualErrorType_t result;
   char buffer[100] = {0};

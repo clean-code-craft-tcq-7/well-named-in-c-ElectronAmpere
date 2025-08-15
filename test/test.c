@@ -18,6 +18,12 @@ int main() {
   testGenerateManualPrintTruncation();
 
   testGenerateManualMarkdown();
+  testGenerateManualMarkdownBufferEmpty();
+  testGenerateManualMarkdownTruncation();
+
   testGenerateManualCSV();
+  testGenerateManualCSVBufferEmpty();
+  testGenerateManualCSVTruncation();
+
   return 0;
 }
