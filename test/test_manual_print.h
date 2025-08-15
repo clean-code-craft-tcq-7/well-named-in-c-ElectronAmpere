@@ -14,8 +14,6 @@ extern "C" {
 
 void testGenerateManualPrint(void);
 void testGenerateManualPrintBufferEmpty(void);
-void testGenerateManualPrintHeaderEmpty(void);
-void testGenerateManualPrintBodyEmpty(void);
 void testGenerateManualPrintTruncation(void);
 
 #ifdef __cplusplus

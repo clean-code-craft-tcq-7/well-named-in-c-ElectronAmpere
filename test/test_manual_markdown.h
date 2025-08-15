@@ -14,8 +14,6 @@ extern "C" {
 
 void testGenerateManualMarkdown(void);
 void testGenerateManualMarkdownBufferEmpty(void);
-void testGenerateManualMarkdownHeaderEmpty(void);
-void testGenerateManualMarkdownBodyEmpty(void);
 void testGenerateManualMarkdownTruncation(void);
 
 #ifdef __cplusplus
