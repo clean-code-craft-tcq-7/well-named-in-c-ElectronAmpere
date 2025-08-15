@@ -3,9 +3,9 @@
 
 #include "../src/colorCodeMapper.h"
 
-void testNumberToPair(int pairNumber, enum MajorColor expectedMajor,
-                      enum MinorColor expectedMinor) {
-  ColorPair colorPair = GetColorFromPairNumber(pairNumber);
+void testNumberToPair(int pairNumber, MajorColor_t expectedMajor,
+                      MinorColor_t expectedMinor) {
+  ColorPair_t colorPair = GetColorFromPairNumber(pairNumber);
   char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
   ColorPairToString(&colorPair, colorPairNames);
   printf("Got pair %s\n", colorPairNames);
@@ -13,9 +13,9 @@ void testNumberToPair(int pairNumber, enum MajorColor expectedMajor,
   assert(colorPair.minorColor == expectedMinor);
 }
 
-void testPairToNumber(enum MajorColor major, enum MinorColor minor,
+void testPairToNumber(MajorColor_t major, MinorColor_t minor,
                       int expectedPairNumber) {
-  ColorPair colorPair;
+  ColorPair_t colorPair;
   colorPair.majorColor = major;
   colorPair.minorColor = minor;
   int pairNumber = GetPairNumberFromColor(&colorPair);

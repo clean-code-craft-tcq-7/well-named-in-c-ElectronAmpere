@@ -18,10 +18,9 @@ a major color and a minor color
 ### Modularity
 
 The entire translation program is in a single file.
-Before adding features and making it bigger,
-split the file.
-This exercise has a limit on the loc (lines of code)
-per file. See the workflow for details.
+Before adding features and making it bigger, split the file.
+This exercise has a limit on the loc (lines of code)per file.
+See the workflow for details.
 
 ### New Feature Request
 

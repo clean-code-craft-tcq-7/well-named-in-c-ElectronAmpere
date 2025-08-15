@@ -6,22 +6,22 @@ extern "C" {
 
 #define MAX_COLORPAIR_NAME_CHARS 16
 
-enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
-enum MinorColor { BLUE, ORANGE, GREEN, BROWN, SLATE };
+typedef enum { WHITE, RED, BLACK, YELLOW, VIOLET } MajorColor_t;
+typedef enum { BLUE, ORANGE, GREEN, BROWN, SLATE } MinorColor_t;
 
 typedef struct {
-  enum MajorColor majorColor;
-  enum MinorColor minorColor;
-} ColorPair;
+  MajorColor_t majorColor;
+  MinorColor_t minorColor;
+} ColorPair_t;
 
 extern const char *MajorColorNames[];
 extern const char *MinorColorNames[];
 extern int numberOfMajorColors;
 extern int numberOfMinorColors;
 
-ColorPair GetColorFromPairNumber(int pairNumber);
-void ColorPairToString(const ColorPair *colorPair, char *buffer);
-int GetPairNumberFromColor(const ColorPair *colorPair);
+ColorPair_t GetColorFromPairNumber(int pairNumber);
+void ColorPairToString(const ColorPair_t *colorPair, char *buffer);
+int GetPairNumberFromColor(const ColorPair_t *colorPair);
 
 #ifdef __cplusplus
 }
