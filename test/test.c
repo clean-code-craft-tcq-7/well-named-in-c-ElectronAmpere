@@ -14,11 +14,10 @@ int main() {
   testPairToNumber(VIOLET, SLATE, 25);
 
   testGenerateManualPrint();
-  testGenerateManualBufferEmpty();
-  testGenerateManualTruncation();
+  testGenerateManualPrintBufferEmpty();
+  testGenerateManualPrintTruncation();
 
   testGenerateManualMarkdown();
   testGenerateManualCSV();
-
   return 0;
 }

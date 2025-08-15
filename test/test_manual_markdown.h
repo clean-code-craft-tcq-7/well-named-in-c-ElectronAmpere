@@ -13,6 +13,10 @@ extern "C" {
 #include "../src/generate_manual.h"
 
 void testGenerateManualMarkdown(void);
+void testGenerateManualMarkdownBufferEmpty(void);
+void testGenerateManualMarkdownHeaderEmpty(void);
+void testGenerateManualMarkdownBodyEmpty(void);
+void testGenerateManualMarkdownTruncation(void);
 
 #ifdef __cplusplus
 }

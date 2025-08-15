@@ -13,6 +13,10 @@ extern "C" {
 #include "../src/generate_manual.h"
 
 void testGenerateManualCSV(void);
+void testGenerateManualCSVBufferEmpty(void);
+void testGenerateManualCSVHeaderEmpty(void);
+void testGenerateManualCSVBodyEmpty(void);
+void testGenerateManualCSVTruncation(void);
 
 #ifdef __cplusplus
 }

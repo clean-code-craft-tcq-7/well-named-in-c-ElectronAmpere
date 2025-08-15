@@ -22,14 +22,12 @@ typedef enum {
   GMERROR_NULL = 0,
 } GenerateManualErrorType_t;
 
-GenerateManualErrorType_t generateManualTypePrint(char *buffer,
-                                                  size_t bufferSize);
-GenerateManualErrorType_t generateManualTypeMarkdown(char *buffer,
-                                                     size_t bufferSize,
-                                                     const char *fileName);
-GenerateManualErrorType_t generateManualTypeCSV(char *buffer, size_t bufferSize,
-                                                const char *fileName);
-
+GenerateManualErrorType_t generateFile(const char *fileName, char *buffer,
+                                       size_t bufferSize);
+GenerateManualErrorType_t generateManual(char *buffer, size_t bufferSize,
+                                         const char *fileName,
+                                         const char *headerFormat,
+                                         const char *bodyFormat);
 #ifdef __cplusplus
 }
 #endif

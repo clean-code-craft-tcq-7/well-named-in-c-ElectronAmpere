@@ -13,10 +13,10 @@ extern "C" {
 #include "../src/generate_manual.h"
 
 void testGenerateManualPrint(void);
-void testGenerateManualBufferEmpty(void);
-void testGenerateManualHeaderEmpty(void);
-void testGenerateManualBodyEmpty(void);
-void testGenerateManualTruncation(void);
+void testGenerateManualPrintBufferEmpty(void);
+void testGenerateManualPrintHeaderEmpty(void);
+void testGenerateManualPrintBodyEmpty(void);
+void testGenerateManualPrintTruncation(void);
 
 #ifdef __cplusplus
 }
