@@ -12,9 +12,21 @@ extern "C" {
 #define HEADER_LENGTH_EMPTY (0)
 #define BODY_LENGTH_EMPTY (0)
 
+#define MANUAL_HEADER_FORMAT_PRINT ("%-8s | %-11s | %-11s\n")
+#define MANUAL_BODY_FORMAT_PRINT ("%8d | %11s | %11s\n")
+
+#define MANUAL_HEADER_FORMAT_MARKDOWN                                          \
+  ("| %-8s | %-11s | %-11s |\n"                                                \
+   "|----------|-------------|-------------|\n")
+#define MANUAL_BODY_FORMAT_MARKDOWN ("| %8d | %11s | %11s |\n")
+
+#define MANUAL_HEADER_FORMAT_CSV ("\"%s\",\"%s\",\"%s\"\n")
+#define MANUAL_BODY_FORMAT_CSV ("%d,\"%s\",\"%s\"\n")
+
 typedef enum {
-  GMERROR_FILE_WRITE_FAILED = -6,
-  GMERROR_FILE_OPEN_FAILED = -5,
+  GMERROR_FILE_WRITE_FAILED = -7,
+  GMERROR_FILE_OPEN_FAILED = -6,
+  GMERROR_FILE_NONE = -5,
   GMERROR_DATA_TRUNCATED = -4,
   GMERROR_BODY_EMPTY = -3,
   GMERROR_HEADER_EMPTY = -2,

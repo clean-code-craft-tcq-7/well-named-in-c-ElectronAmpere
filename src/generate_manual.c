@@ -43,8 +43,9 @@ GenerateManualErrorType_t generateManual(char *buffer, size_t bufferSize,
 
   GenerateManualErrorType_t result =
       generateFile(fileName, buffer, (currentBufferPosition - buffer));
-  if (result != GMERROR_NULL)
+  if (result != GMERROR_NULL && result != GMERROR_FILE_NONE) {
     return result;
+  }
 
   return GMERROR_NULL; // Success indicator as per the original
 }

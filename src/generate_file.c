@@ -5,6 +5,9 @@ GenerateManualErrorType_t generateFile(const char *fileName, char *buffer,
                                        size_t bufferSize) {
 
   // Write buffer to file
+  if (!fileName) {
+    return GMERROR_FILE_NONE;
+  }
   FILE *file = fopen(fileName, "w");
   if (!file) {
     return GMERROR_FILE_OPEN_FAILED;
