@@ -16,6 +16,9 @@ void testNumberToPair(int pairNumber, MajorColor_t expectedMajor,
                       MinorColor_t expectedMinor);
 void testPairToNumber(MajorColor_t major, MinorColor_t minor,
                       int expectedPairNumber);
+void testNumberToPairInvalidLow(void);
+void testNumberToPairInvalidHigh(void);
+void testPairToNumberInvalidMajor(void);
 
 #ifdef __cplusplus
 }
