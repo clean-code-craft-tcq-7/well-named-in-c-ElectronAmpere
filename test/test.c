@@ -19,21 +19,7 @@ int main() {
   testNumberToPairInvalidHigh();
   testPairToNumberInvalidMajor();
 
-  testGetMajorColor(0, "White");
-  testGetMajorColor(1, "Red");
-  testGetMajorColor(2, "Black");
-  testGetMajorColor(3, "Yellow");
-  testGetMajorColor(4, "Violet");
-  testGetMajorColor(-1, "Unknown");
-  testGetMajorColor(5, "Invalid");
-
-  testGetMinorColor(0, "Blue");
-  testGetMinorColor(1, "Orange");
-  testGetMinorColor(2, "Green");
-  testGetMinorColor(3, "Brown");
-  testGetMinorColor(4, "Slate");
-  testGetMinorColor(-1, "Unknown");
-  testGetMinorColor(5, "Invalid");
+  testColorNames();
 
   testGenerateManualPrint();
   testGenerateManualPrintBufferEmpty();

@@ -11,6 +11,7 @@ extern "C" {
 
 void testGetMajorColor(int index, const char *expected);
 void testGetMinorColor(int index, const char *expected);
+void testColorNames(void);
 
 #ifdef __cplusplus
 }
